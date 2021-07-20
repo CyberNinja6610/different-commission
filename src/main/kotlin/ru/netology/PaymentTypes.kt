@@ -22,7 +22,7 @@ enum class PaymentTypes(var title: String, var number: Int, var monthLimit: Long
         }
         return when (this) {
             MAESTRO, MASTERCARD -> if (sum > 7500000) (sum * 0.006).roundToLong() + 20 else 0
-            VISA, MIR -> max((sum * 0.0075).roundToLong(), 3500)
+            VISA, MIR -> max((sum * 0.00075).roundToLong(), 3500)
             VK_PAY -> 0
         }
     }
