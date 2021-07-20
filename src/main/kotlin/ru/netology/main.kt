@@ -1,3 +1,5 @@
+package ru.netology
+
 import java.text.NumberFormat
 import kotlin.math.min
 
